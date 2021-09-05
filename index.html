@@ -81,7 +81,7 @@
     function diplayValue() {
         let p_name = place.value;
         let url = `http://api.openweathermap.org/data/2.5/weather?q=${p_name}&units=metric&appid=8998b811aa638647d015cc5ac9d45770`
-        fetch(url).then(res => res.json()).then(data => {
+        fetch(url).then(res => res.json()).then(data =>{
             let city_name = data.name;
             let temp1 = data.main.temp;
             let tempmin = data.main.temp_min;
@@ -104,10 +104,10 @@
         <li class="list-group-item fas  fa-1x fa-wind"> Wind speed-${sp}</li>
       </ul>
       
-    <div/>`
+    </div>`
             nam.innerHTML = html_data;
 
-        })
+        });
     }
 </script>
 
